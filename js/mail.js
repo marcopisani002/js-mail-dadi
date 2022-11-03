@@ -5,7 +5,7 @@ const userMail = prompt("Inserisca la mail che vuole verificare");
 
 // SPECIFICHE MAIL PRESENTI NEL DATABASE
 
-const listaMail = ["mario.rossi@gmail.com", "giuseppe.verdi@gmail.com", "pinco.pallino@gmail.com", "html.css@gmail.com", ];
+const listaMail = ["mario.rossi@gmail.com", "giuseppe.verdi@gmail.com", "pinco.pallino@gmail.com", "html.css@gmail.com"];
 console.log("LISTA MAIL NEL DATABASE : ", listaMail);
 
 
@@ -22,21 +22,27 @@ let trovato = false;
 // CICLO FOR PER VERIFICA
 
 
-for ( let i = 0; i < listaMail.length; i++ ) {
-    
-    const elementoMail = listaMail[ i ];
-  
-  
-  
+for (let i = 0; i < listaMail.length; i++) {
+    console.log(i);
+    const elementoMail = listaMail[i];
+    console.log(elementoMail);
+
+
     // if ( elementoMail ===userMail )=> si ripete all'infinito
-    if ( elementoMail ===userMail )  {
-      trovato = true;
-      console.log( elementoMail + "  Mail trovata! "  );
+    if (elementoMail === userMail) {
+        trovato = true;
+        console.log(elementoMail + "  Mail trovata! ");
     }
-    else {
-        
-        alert( "L'elemento cercato non è stato trovato" );
-      }
+
+}
+if ( trovato === true ) {
+   
+    const titleEl = document.querySelector( ".title" );
+
+  
+    titleEl.innerHTML = `La tua lista della spesa contiene l'elemento cercato! : ${userMail} `;
+  
+  } else {
+    
+    alert( "L'elemento cercato non è stato trovato" );
   }
-  
-  
