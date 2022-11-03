@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsSS8oOv9idot6eNJ9LY1jW9S4GuNxlidPyg&usqp=CAU" type="image/x-icon">
-    <title>Dadi</title>
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsSS8oOv9idot6eNJ9LY1jW9S4GuNxlidPyg&usqp=CAU"
+        type="image/x-icon">
+    <title>DADI</title>
 </head>
+
 <body>
-   <script src="js/dadi.js"></script> 
+    <p>Lancio dadi:<input type="button" onclick="lancio()" value="Lancio"></p>
+    <p onload="lancio_pc()">
+        <span class="" id="numero_pc1" onload="lancio_pc()"></span>
+        <span class="" id="numero_pc2"></span>
+        <span class="" id="totale_pc"></span>
+    </p>
+
+    <p>
+        <span class="" id="numero_1"></span>
+        <span class="" id="numero_2"></span>
+        <span class="" id="totale1"></span>
+    </p>
+
+    <p id="vinto"></p>
+
+
+
+
+
+
+
+
+    <script src="js/dadi.js"></script>
 </body>
+
 </html>
